@@ -263,7 +263,7 @@ understanding and answering user queries intelligently.
 ---
 
 ## 📸 Chatbot Preview
-<!-- Add your chatbot screenshot here -->
+<!-- "C:\Users\91820\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 143359.png" -->
 
 ---
 
