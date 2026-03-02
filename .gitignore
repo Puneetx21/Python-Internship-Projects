@@ -18,3 +18,7 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+# Environment variables (SECRET - never push!)
+.env
+*.env
+Task1/.env
