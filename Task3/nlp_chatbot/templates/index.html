@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark">
+
+    <div class="app-wrapper">
+
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="bot-info">
+                <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+                <div>
+                    <h2>NLP Chatbot</h2>
+                    <span class="status">● Online</span>
+                </div>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chat-window">
+            <div class="message bot-message">
+                <div class="bubble">👋 Hello! I'm your NLP Chatbot. Ask me anything!</div>
+                <span class="timestamp" id="init-time"></span>
+            </div>
+        </div>
+
+        <!-- Quick Suggestions -->
+        <div class="suggestions">
+            <button onclick="sendSuggestion('What is AI?')">What is AI?</button>
+            <button onclick="sendSuggestion('Tell me a joke')">Tell me a joke 😄</button>
+            <button onclick="sendSuggestion('What is Python?')">What is Python?</button>
+            <button onclick="sendSuggestion('Who made you?')">Who made you?</button>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Type your message..."
+                onkeydown="if(event.key === 'Enter') sendMessage()"
+                autocomplete="off"
+            />
+            <button class="send-btn" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        // Set initial timestamp
+        document.getElementById('init-time').textContent = getTime();
+
+        function getTime() {
+            return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('theme-icon');
+            body.classList.toggle('dark');
+            body.classList.toggle('light');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        }
+
+        function appendMessage(text, sender) {
+            const chatWindow = document.getElementById('chat-window');
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('message', sender === 'user' ? 'user-message' : 'bot-message');
+
+            msgDiv.innerHTML = `
+                <div class="bubble">${text}</div>
+                <span class="timestamp">${getTime()}</span>
+            `;
+
+            chatWindow.appendChild(msgDiv);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function showTyping() {
+            const chatWindow = document.getElementById('chat-window');
+            const typing = document.createElement('div');
+            typing.classList.add('message', 'bot-message');
+            typing.id = 'typing-indicator';
+            typing.innerHTML = `<div class="bubble typing"><span></span><span></span><span></span></div>`;
+            chatWindow.appendChild(typing);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function removeTyping() {
+            const el = document.getElementById('typing-indicator');
+            if (el) el.remove();
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
+            if (!message) return;
+
+            appendMessage(message, 'user');
+            input.value = '';
+            showTyping();
+
+            try {
+                const res = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                const data = await res.json();
+                removeTyping();
+                appendMessage(data.response, 'bot');
+            } catch (err) {
+                removeTyping();
+                appendMessage('⚠️ Server error. Is Flask running?', 'bot');
+            }
+        }
+
+        function sendSuggestion(text) {
+            document.getElementById('user-input').value = text;
+            sendMessage();
+        }
+    </script>
+
+</body>
+</html>

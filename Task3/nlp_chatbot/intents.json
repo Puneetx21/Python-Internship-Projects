@@ -1,0 +1,84 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "What's up", "Howdy"],
+      "responses": ["Hello! How can I help you?", "Hey there! What can I do for you?", "Hi! Ask me anything."]
+    },
+    {
+      "tag": "farewell",
+      "patterns": ["Bye", "Goodbye", "See you", "Take care", "Later", "Exit", "Quit"],
+      "responses": ["Goodbye! Have a great day!", "See you later!", "Take care! Come back anytime."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That was helpful", "Appreciate it", "Cheers"],
+      "responses": ["You're welcome!", "Happy to help!", "Anytime! Let me know if you need more."]
+    },
+    {
+      "tag": "about_bot",
+      "patterns": ["Who are you", "What are you", "Tell me about yourself", "What can you do", "Are you a bot"],
+      "responses": ["I am an NLP chatbot built with Python, NLTK and Flask!", "I'm your AI assistant powered by NLP. Ask me anything!"]
+    },
+    {
+      "tag": "age",
+      "patterns": ["How old are you", "What is your age", "When were you created", "When were you built"],
+      "responses": ["I was just recently built using Python and NLP!", "Age doesn't apply to me — I'm a bot!"]
+    },
+    {
+      "tag": "creator",
+      "patterns": ["Who made you", "Who created you", "Who built you", "Who is your developer"],
+      "responses": ["I was built by a Python developer using NLTK and Flask!", "My creator used Python, NLTK, and scikit-learn to bring me to life!"]
+    },
+    {
+      "tag": "what_is_ai",
+      "patterns": ["What is AI", "Define artificial intelligence", "Tell me about AI", "Explain AI", "What does AI mean"],
+      "responses": ["AI stands for Artificial Intelligence — it enables machines to simulate human thinking.", "Artificial Intelligence is the ability of machines to perform tasks that typically require human intelligence."]
+    },
+    {
+      "tag": "what_is_nlp",
+      "patterns": ["What is NLP", "What is natural language processing", "Explain NLP", "Define NLP"],
+      "responses": ["NLP stands for Natural Language Processing — it helps computers understand and interpret human language.", "Natural Language Processing is a branch of AI focused on the interaction between computers and human language."]
+    },
+    {
+      "tag": "what_is_ml",
+      "patterns": ["What is machine learning", "Define machine learning", "Explain ML", "What is ML"],
+      "responses": ["Machine Learning is a subset of AI where systems learn from data to improve over time without being explicitly programmed.", "ML allows computers to learn patterns from data and make decisions automatically."]
+    },
+    {
+      "tag": "what_is_python",
+      "patterns": ["What is Python", "Tell me about Python", "Why use Python", "Explain Python language"],
+      "responses": ["Python is a high-level, easy-to-learn programming language widely used in AI, web development, and data science.", "Python is popular for its simple syntax and powerful libraries like NLTK, Flask, and scikit-learn."]
+    },
+    {
+      "tag": "what_is_flask",
+      "patterns": ["What is Flask", "Tell me about Flask", "Explain Flask", "Why use Flask"],
+      "responses": ["Flask is a lightweight Python web framework used to build web applications and REST APIs.", "Flask is minimal and flexible — perfect for building web backends quickly in Python."]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["Tell me a joke", "Say something funny", "Make me laugh", "Crack a joke"],
+      "responses": ["Why do programmers prefer dark mode? Because light attracts bugs! 😄", "I told a joke about UDP once... I'm not sure if you got it. 😂", "Why was the JavaScript developer sad? Because he didn't Node how to Express himself! 😆"]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["What is the weather", "Tell me the weather", "Is it raining", "Weather today"],
+      "responses": ["I don't have live weather access, but you can check https://weather.com for accurate updates!", "For real-time weather, try asking a weather API-powered bot!"]
+    },
+    {
+      "tag": "time",
+      "patterns": ["What time is it", "Tell me the time", "Current time", "What is the time now"],
+      "responses": ["I can't check the clock, but your device's clock is always accurate!", "I don't have real-time access, but your system time is just a glance away!"]
+    },
+    {
+      "tag": "help",
+      "patterns": ["Help", "I need help", "What can you answer", "What do you know", "Guide me"],
+      "responses": ["I can answer questions about AI, ML, NLP, Python, Flask, tell jokes, and more. Just ask!", "Try asking me: 'What is AI?', 'Tell me a joke', or 'Who made you?'"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": ["I'm not sure I understand. Could you rephrase that?", "Hmm, I don't have an answer for that yet. Try asking something else!", "I didn't quite get that. Ask me about AI, Python, NLP or just say Hi!"]
+    }
+  ]
+}
