@@ -263,9 +263,10 @@ understanding and answering user queries intelligently.
 ---
 
 ## 📸 Chatbot Preview
-<!-- "C:\Users\91820\OneDrive\Pictures\Screenshots\Screenshot 2026-02-27 143359.png" -->
 
----
+<img width="1749" height="922" alt="Screenshot 2026-03-02 130046" src="https://github.com/user-attachments/assets/cb52ce4f-e368-47e7-a7c2-742603d0bd55" />
+
+--
 
 ## ✨ Features
 
