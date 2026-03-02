@@ -9,6 +9,9 @@ The **Weather Analytics Dashboard** is a Python-based, real-time data visualizat
 The dashboard presents all insights on a **single screen**, making it easy to analyze and compare environmental conditions at a glance.
 
 ---
+## 📸 Dashboard Preview
+
+<img width="1749" height="922" alt="Screenshot 2026-03-02 130046" src="https://github.com/user-attachments/assets/cb52ce4f-e368-47e7-a7c2-742603d0bd55" />
 
 ## 🚀 Key Features
 
@@ -125,6 +128,10 @@ The **Automated Report Generation System** is a Python-based solution designed t
 The system reads structured data files, performs multi-dimensional analysis, generates visual insights, and compiles everything into a decision-ready business report.
 
 ---
+## 📸 Report Preview
+
+<img width="943" height="857" alt="Screenshot 2026-02-27 153547" src="https://github.com/user-attachments/assets/5a777efa-a02a-4dc2-ac81-88acad8aff79" />
+
 
 ## 🚀 Key Features
 
@@ -264,7 +271,8 @@ understanding and answering user queries intelligently.
 
 ## 📸 Chatbot Preview
 
-<img width="1749" height="922" alt="Screenshot 2026-03-02 130046" src="https://github.com/user-attachments/assets/cb52ce4f-e368-47e7-a7c2-742603d0bd55" />
+<img width="496" height="792" alt="Screenshot 2026-03-02 114059" src="https://github.com/user-attachments/assets/56e75730-d9d9-40d8-ae26-b6a4bc3c7bff" />
+
 
 --
 
