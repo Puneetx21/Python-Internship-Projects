@@ -408,6 +408,10 @@ trained on the UCI SMS Spam Collection dataset with ~98% accuracy.
 
 ## 📸 Project Preview
 <!-- Add your model comparison chart screenshot here -->
+<img width="1587" height="582" alt="image" src="https://github.com/user-attachments/assets/2bb3e586-efc6-4ba8-9e1c-7ca8aa5775d8" />
+<img width="818" height="466" alt="image" src="https://github.com/user-attachments/assets/6b520ba2-4eb5-4f6e-a06a-66613822aa72" />
+
+
 
 ---
 
