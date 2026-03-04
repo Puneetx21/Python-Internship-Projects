@@ -235,7 +235,7 @@ automated-report-generation/
 ## 📦 Deliverables
 
 * 📄 **Fully Documented Python Script**
-  🔗 [https://lnkd.in/dN7q-fhV](https://lnkd.in/dN7q-fhV)
+  🔗 [[https://lnkd.in/dN7q-fhV](https://lnkd.in/dN7q-fhV](https://drive.google.com/file/d/1QvXvz20UfBRFRavb8_7_jduIEz8Q6viC/view?usp=sharing))
 
 * 📊 **Sample Output Report**
   `Sales_Analytics_Report.pdf` — includes KPIs, charts, and business insights
